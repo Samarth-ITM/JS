@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCD</title>
+    <link rel="stylesheet" href="ccd.css">
+    <script src="ccd.js"></script>
+</head>
+<body>
+
+<h1 id="title"><strong>CCD</strong></h1>
+
+<div id="container">
+<form id="form">
+    <fieldset>
+        <legend>Menu</legend>
+
+        <label><input type="radio" name="beverage" value="Tea"> Tea (₹20)</label><br>
+        <label><input type="radio" name="beverage" value="Coffee"> Coffee (₹30)</label><br>
+        <label><input type="radio" name="beverage" value="Milk"> Milk (₹15)</label><br>
+        <label><input type="radio" name="beverage" value="Water"> Water (₹10)</label><br><br>
+
+        <button type="button" onclick="showOrder()">Order</button>
+    </fieldset>
+</form>
+</div>
+
+<p id="output"></p>
+
+<script src="ccd.js"></script>
+</body>
+
+</html>

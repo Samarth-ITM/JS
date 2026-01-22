@@ -1,0 +1,20 @@
+#title {
+    text-align: center;
+    color: darkgoldenrod;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#form {
+    text-align: left;
+}
+
+#output {
+    text-align: center;
+    margin-top: 20px;
+}
