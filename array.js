@@ -9,4 +9,4 @@ for (let i of mrk){
 
 avg = sum/mrk.length;
 
-console.log(avg);
+console.log("Average: "+avg);
