@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+    background: #bfe8eb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* --- Loading State --- */
+#loader {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 300px;
+width: 100%;
+grid-column: 1 / -1;
+}
+
+.spinner {
+width: 50px;
+height: 50px;
+border: 5px solid rgba(0, 0, 0, 0.1);
+border-top-color: var(--mc-red);
+border-radius: 50%;
+animation: spin 1s linear infinite;
+margin-bottom: 1rem;
+}
+
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🌤 Weather</h2>
+    <h3 id="city">Mumbai</h3>
+    <h1 id="temp">-- °C</h1>
+    <p id="wind">Wind: -- km/h</p>
+    <p id="condition"></p>
+    <button onclick="getWeather()">Refresh</button>
+</div>
+
+<div id="loader" style="display: none;"></div>
+
+
+</div>
+
+<script src="weather.js"></script>
+</body>
+</html>

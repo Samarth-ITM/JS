@@ -1,119 +1,139 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-header{
-    background-color: black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-
-.hero-content{
-    color:white;
-    
-    
+body {
+  background-color: #000;
+  background-image:
+    linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0) 60%, rgba(0,0,0,0.8)),
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
 }
 
-
+/* ===== NAVBAR ===== */
 .navbar {
+  padding: 24px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-}
-
-.logo img {
-  width: 120px;
+  position: relative;
+  z-index: 10;
 }
 
 .sign-btn {
-  background-color: #e50914; 
+  background-color: #e50914;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 18px;
+  font-size: 14px;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.sign-btn:hover {
+  background-color: #c11119;
+}
 
+/* ===== SIGN-IN MODAL ===== */
+.sign {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.85);
+  padding: 40px;
+  width: 350px;
+  border-radius: 8px;
+  z-index: 9999;
+  display: none;
+}
+
+.sign h2,
+.sign p {
+  color: white;
+}
+
+.sign input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+/* ===== HERO ===== */
 .hero {
-  height: 70vh;
-  background: linear-gradient(to top, black, transparent),
-    url("https://assets.nflxext.com/ffe/siteui/vlv3/e393bb3f-261f-43d1-99bb-16a157885615/web/IN-en-20260105-TRIFECTA-perspective_2802b120-4b8c-44a5-8fb9-617a728f4ec6_large.jpg") center/cover no-repeat;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 .hero-content {
-  max-width: 500px;
+  max-width: 800px;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.hero form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hero input {
-  padding: 10px;
-  width: 60%;
+  width: 300px;
+  padding: 15px;
+  border-radius: 4px;
   border: none;
-  margin-top: 10px;
 }
 
 .hero button {
-  padding: 10px 20px;
-  background-color: #e50914;
-  border: none;
+  padding: 15px 25px;
+  background: #e50914;
   color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
-
+/* ===== MOVIES ===== */
 .movies {
-  padding: 40px;
-  background-color: black;
-  color: white;
+  padding: 40px 60px;
 }
 
 .movie-row {
   display: flex;
-  gap: 15px;
-  overflow-x: auto;
-}
-
-.movie-card {
-  min-width: 150px;
-  transition: transform 0.3s;
+  gap: 20px;
 }
 
 .movie-card img {
-  width: 100%;
-  border-radius: 5px;
+  width: 200px;
+  border-radius: 6px;
 }
 
-.movie-card:hover {
-  transform: scale(1.1);
-}
-.sign {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(168, 21, 21);
-    padding: 50px;
-    width: 300px;
-    border: 2px solid black;
-    display: none;
-    color: azure;
-    font-family: Arial, sans-serif;
-    
-}
-
-.show-modal {
-    display: block;  
-
+.movie-card p {
+  margin-top: 8px;
+  text-align: center;
 }
