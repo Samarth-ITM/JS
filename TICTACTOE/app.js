@@ -16,7 +16,7 @@ reset.addEventListener("click", restart);
 
 function restart(){
     c = 0;
-    f = 0;
+    f = 1;
     for (let i of boxes){
         i.disabled = false;
         i.innerHTML = "";
@@ -24,15 +24,12 @@ function restart(){
 }
 
 
-f = 0;
+f = 1;
 c = 0;
 for (let i of boxes){
 
-    if (c == 7 && f == 0){
-        alert("Tie");
-        setTimeout(restart(),500);
-    };
-        
+
+    
     i.addEventListener("click", ()=> {
     c%2==0 ? i.innerHTML = 'X': i.innerHTML = 'O';
     i.disabled = true;
@@ -40,9 +37,14 @@ for (let i of boxes){
     setTimeout(checkwin, 500);
     
     c++;
+    console.log(c, f);
+    
+    if (c == 9 && f == 1){
+        alert("Tie");
+        setTimeout(restart,1000);
+    };
 
-        });
-
+});
 
 };
 
@@ -54,7 +56,7 @@ function checkwin(){
 
         if (pos1 != "" && pos2 != "" && pos3 != "") {
             if (pos1 == pos2 && pos2 == pos3){
-                f = 1;
+                f = 2;
                 alert("Winner is " + pos1);
                 Displock();
                 restart();
